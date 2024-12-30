@@ -1,0 +1,31 @@
+.bread_cumb {
+    ul {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+
+        li {
+            position: relative;
+
+            &:nth-child(n+2) {
+                &::before {
+                    content: "/";
+                    font-size: 10px;
+                }
+            }
+
+            a {
+                font-size: 12px;
+                color: var(--brand_deep);
+
+                i {
+                    margin-right: 3px;
+                }
+
+                &:hover{
+                    color: var(--brand);
+                }
+            }
+        }
+    }
+}

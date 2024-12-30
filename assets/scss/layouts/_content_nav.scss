@@ -1,0 +1,47 @@
+.content_nav {
+    background-color: var(--brand_deep);
+
+    .content_nav_heading {
+        font-size: 12px;
+        display: block;
+        text-align: center;
+        font-weight: 500;
+        color: var(--white);
+    }
+
+    .content_nav_menu {
+        padding-top: 20px;
+
+        li {
+            a {
+                font-size: 14px;
+                display: flex;
+                color: var(--dark_text_color);
+                border-radius: 3px;
+                position: relative;
+                gap: 10px;
+                padding: 5px 10px;
+                align-items: center;
+                margin-bottom: 3px;
+
+                .title::first-letter {
+                    text-transform: capitalize;
+                }
+
+                i {
+                    font-size: 10px;
+                }
+
+                &:hover {
+                    background-color: var(--brand_deep_hover);
+                    color: var(--white);
+                }
+
+                &.active {
+                    background-color: var(--brand);
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}

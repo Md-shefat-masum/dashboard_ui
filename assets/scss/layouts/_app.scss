@@ -4,6 +4,7 @@
     .header {
         background-color: var(--white);
         height: 30px;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.08);
     }
 
     .main {
@@ -21,19 +22,37 @@
             height: calc(100vh - 30px);
             padding: 8px;
             padding-bottom: 0px;
+            display: flex;
+            gap: 8px;
+
+            .content_nav {
+                // background-color: var(--white);
+                border-radius: 3px;
+                height: calc(100vh - 45px);
+                border: 1px solid var(--white_border);
+                width: 160px;
+                padding: 10px;
+            }
 
             .app_content {
+                flex: 1;
                 background-color: var(--white);
                 border-radius: 3px;
-                height: calc(100vh - 70px);
-                width: 100%;
+                height: calc(100vh - 45px);
                 margin-bottom: 7px;
                 padding: 10px;
+                border: 1px solid var(--white_border);
             }
 
             .footer {
                 background-color: var(--ui_dark_light);
                 height: 25px;
+            }
+
+            &:has(.footer) {
+                .app_content {
+                    height: calc(100vh - 70px);
+                }
             }
         }
     }
